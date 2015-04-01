@@ -1,0 +1,25 @@
+%h1 Listing sales
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th Shop-id
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sales.each do |sale|
+      %tr
+        %td= sale.title
+        %td= sale.content
+        %td= sale.shop-id
+        %td= link_to 'Show', sale
+        %td= link_to 'Edit', edit_sale_path(sale)
+        %td= link_to 'Destroy', sale, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sale', new_sale_path

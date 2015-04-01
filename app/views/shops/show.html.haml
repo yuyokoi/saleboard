@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @shop.name
+%p
+  %b Tel:
+  = @shop.tel
+%p
+  %b Time:
+  = @shop.time
+%p
+  %b Offday:
+  = @shop.offday
+%p
+  %b Address:
+  = @shop.address
+%p
+  %b Station:
+  = @shop.station
+%p
+  %b Message:
+  = @shop.message
+
+= link_to 'Edit', edit_shop_path(@shop)
+\|
+= link_to 'Back', shops_path
